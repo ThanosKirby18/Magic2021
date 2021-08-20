@@ -14,5 +14,7 @@ public class magicDriver {
         for(int i = 0; i < myEnemies.length; i++){
             System.out.println(myEnemies[i]);
         }
+        // Adding a comment for proof of concept
+        System.out.print("Hello There");
     }
 }

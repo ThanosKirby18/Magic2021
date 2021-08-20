@@ -10,7 +10,6 @@ public abstract class Enemies {
 
 
 
-
      @Override
     public String toString(){
          return "This Bad Boy Has Claws? " + hasClaws;
