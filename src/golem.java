@@ -1,5 +1,6 @@
 class golem extends Enemies{
     private String element;
+    private static int numGolem;
     enum Density {
         LOW,
         MEDIUM,
@@ -9,7 +10,8 @@ class golem extends Enemies{
     public golem (boolean hasClaws, String element){
         super(hasClaws);
         this.element = element;
-        checking();
+        checkElement();
+
     }
     public String getElement() {
         return element;
@@ -17,9 +19,9 @@ class golem extends Enemies{
     public void setElement(String element) {
         this.element = element;
     }
-    private void checking()
+    private void checkElement()
     {
-        if (element != "magic" || element != "rock" || element != "ice" ) {
+        if (element != "magic" && element != "rock" && element != "ice" ) {
             element = "rock";
         }
         setDens();
@@ -35,11 +37,13 @@ class golem extends Enemies{
             dens = Density.HIGH;
         }
     }
-    public String toString(){
 
+    public String toString(){
+        numGolem++;
         String output = super.toString();
         output += "\nThis Golem Is a " + element + " golem. ";
         output += "\nThis Golem has a " + dens + " density";
+        output += "\nThere are/is " + numGolem + " Golems";
         return output;
     }
-}
+};

@@ -1,12 +1,14 @@
 public class dragon extends Enemies {
     private int wingNum;
     private double wingLength;
+    private static int numDragon;
 
     public dragon (boolean hasClaws, int wingNum, double wingLength){
         super(hasClaws);
         this.wingNum = wingNum;
         this.wingLength = wingLength;
-        checking();
+        checkWing();
+        numDragon++;
     }
     public int getWingNum() {
         return wingNum;
@@ -20,7 +22,7 @@ public class dragon extends Enemies {
     public void setWingLength(double wingLength) {
         this.wingLength = wingLength;
     }
-    private void checking()
+    private void checkWing()
     {
         if (wingNum < 0) {
             wingNum = 2;
@@ -33,6 +35,7 @@ public class dragon extends Enemies {
 
         String output = super.toString();
         output += "\nThis Dragon Has " + wingNum + " wings. \n The wings are " + wingLength + " feet long";
+        output += "\nThere are/is " + numDragon + "Dragons";
         return output;
-    }
+        }
 }
