@@ -6,6 +6,13 @@ public abstract class Enemies {
     {
         this.hasClaws = hasClaws;
     }
+    public boolean getHasClaws() {
+        return hasClaws;
+    }
+    // Brain Method
+    public void setHasClaws(boolean hasClaws) {
+        this.hasClaws = hasClaws;
+    }
 
      @Override
     public String toString(){

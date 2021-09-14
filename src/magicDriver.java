@@ -24,7 +24,7 @@ public class magicDriver {
         System.out.println(jack.toString());
 
         joe.setWizardRank(5);
-        goku.setMagicType("Anima");
+        goku    .setMagicType("Anima");
 
         System.out.println(joe.toString());
         System.out.println(goku.toString());

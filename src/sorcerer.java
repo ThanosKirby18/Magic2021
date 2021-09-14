@@ -22,6 +22,7 @@ public class sorcerer {
     public void setMagicType(String magicType) {
         this.magicType = magicType;
     }
+
     public void checkRank(){
         if (wizardRank <= 0){
             wizardRank = 1;
