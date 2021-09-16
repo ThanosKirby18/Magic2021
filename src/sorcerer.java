@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 public class sorcerer {
     private int wizardRank;
-    private static int numWizard;
+    private static int countWizard;
     private String magicType;
     ArrayList<String> Spell = new ArrayList<String>();
     public sorcerer ( int wizardRank, String magicType){
@@ -9,10 +9,18 @@ public class sorcerer {
         this.magicType = magicType;
         checkRank();
         posSpell();
+        count++;
     }
     public int getWizardRank() {
         return wizardRank;
     }
+    private static int count;
+
+    public static int getCount ()
+    {
+        return count;
+    }
+
     public void setWizardRank(int wizardRank) {
         this.wizardRank = wizardRank;
     }
@@ -87,11 +95,9 @@ public class sorcerer {
     }
 
     public String toString(){
-        numWizard++;
         String output = "";
         output += "\nYour "+ magicType +" Sorcerer is Rank #" + wizardRank;
         output += "\nHe can use these Spells:";
-        output += "\nThere are/is " + numWizard + " Sorcerer ";
         for (int i = 0; i < Spell.size(); i++) {
             output += "\n" + Spell.get(i);
         }

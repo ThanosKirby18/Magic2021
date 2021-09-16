@@ -1,12 +1,18 @@
 public class goblin extends Enemies {
     //  Instance Variables
     private int numClaws;
-    private static int numGob;
     //Constructor
     public goblin (boolean hasClaws, int numClaws){
         super(hasClaws);
         this.numClaws = numClaws;
         checkClaw();
+        count++;
+    }
+    private static int count;
+
+    public static int getCount ()
+    {
+        return count;
     }
     // Getters and Setters
     public int getNumClaws() {
@@ -25,10 +31,8 @@ public class goblin extends Enemies {
     // ToString
 
     public String toString(){
-        numGob++;
         String output = super.toString();
                output += "\nThis Goblin Has " + numClaws + " claws.";
-               output += "\nThere are/is " + numGob + " Goblins";
         return output;
     }
 }

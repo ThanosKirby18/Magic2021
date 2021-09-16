@@ -1,6 +1,6 @@
 class golem extends Enemies{
     private String element;
-    private static int numGolem;
+
     enum Density {
         LOW,
         MEDIUM,
@@ -11,7 +11,13 @@ class golem extends Enemies{
         super(hasClaws);
         this.element = element;
         checkElement();
+        count++;
+    }
+    private static int count;
 
+    public static int getCount ()
+    {
+        return count;
     }
     public String getElement() {
         return element;
@@ -39,11 +45,9 @@ class golem extends Enemies{
     }
 
     public String toString(){
-        numGolem++;
         String output = super.toString();
         output += "\nThis Golem Is a " + element + " golem. ";
         output += "\nThis Golem has a " + dens + " density";
-        output += "\nThere are/is " + numGolem + " Golems";
         return output;
     }
 };

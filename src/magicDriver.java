@@ -24,9 +24,15 @@ public class magicDriver {
         System.out.println(jack.toString());
 
         joe.setWizardRank(5);
-        goku    .setMagicType("Anima");
+        goku.setMagicType("Anima");
 
         System.out.println(joe.toString());
         System.out.println(goku.toString());
+
+        System.out.println("Number of Goblin " + goblin.getCount());
+        System.out.println("Number of Golems " + golem.getCount());
+        System.out.println("Number of dragons " + dragon.getCount());
+        System.out.println("Number of Sorcerers  " + sorcerer.getCount());
+
     }
 }
