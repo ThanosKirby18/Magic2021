@@ -31,15 +31,17 @@ public class sorcerer {
         this.magicType = magicType;
     }
 
-    public void checkRank(){
-        if (wizardRank <= 0){
-            wizardRank = 1;
-        }
-        if (magicType != "Anima" && magicType != "Light" && magicType != "Dark"){
-            magicType = "Anima";
-        }
-    }
-    public void posSpell(){
+//    public String checkRank(){
+//        if (wizardRank <= 0){
+//            wizardRank = 1;
+//        }
+//        if (magicType != "Anima" && magicType != "Light" && magicType != "Dark"){
+//            magicType = "Anima";
+//        }
+//        return
+//    }
+    //just got busted by your teacher for not signing out!!!
+    public String posSpell(){
         Spell.clear();
         if (magicType == "Anima") {
             if(wizardRank >= 1){
@@ -98,9 +100,9 @@ public class sorcerer {
         String output = "";
         output += "\nYour "+ magicType +" Sorcerer is Rank #" + wizardRank;
         output += "\nHe can use these Spells:";
-        for (int i = 0; i < Spell.size(); i++) {
-            output += "\n" + Spell.get(i);
-        }
+//        for (int i = 0; i < Spell.size(); i++) {
+//            output += "\n" + Spell.get(i);
+//        }
         return output;
 
 
