@@ -29,7 +29,7 @@ public class dragon extends Enemies {
     public void setWingLength(double wingLength) {
         this.wingLength = wingLength;
     }
-    private void checkWing()
+    public double checkWing()
     {
         if (wingNum < 0) {
             wingNum = 2;
@@ -37,6 +37,7 @@ public class dragon extends Enemies {
         if (wingLength < 0){
             wingLength = 2.3;
         }
+        return wingLength;
     }
     public String toString(){
 

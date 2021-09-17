@@ -22,10 +22,11 @@ public class goblin extends Enemies {
     public void setNumClaws(int numClaws) {
         this.numClaws = numClaws;
     }
-    private void checkClaw() {
+    public int checkClaw() {
         if (numClaws < 0) {
             numClaws = 10;
         }
+        return numClaws;
 
     }
     // ToString

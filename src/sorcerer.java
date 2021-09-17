@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.RandomAccess;
+
 public class sorcerer {
     private int wizardRank;
     private static int countWizard;
@@ -31,18 +33,19 @@ public class sorcerer {
         this.magicType = magicType;
     }
 
-//    public String checkRank(){
-//        if (wizardRank <= 0){
-//            wizardRank = 1;
-//        }
-//        if (magicType != "Anima" && magicType != "Light" && magicType != "Dark"){
-//            magicType = "Anima";
-//        }
-//        return
-//    }
+    public String checkRank(){
+        if (wizardRank <= 0){
+            wizardRank = 1;
+        }
+        if (magicType != "Anima" && magicType != "Light" && magicType != "Dark"){
+            magicType = "Anima";
+        }
+        return magicType;
+    }
     //just got busted by your teacher for not signing out!!!
-    public String posSpell(){
+    public RandomAccess posSpell(){
         Spell.clear();
+        String diffSpells;
         if (magicType == "Anima") {
             if(wizardRank >= 1){
                 Spell.add("Fire");
@@ -94,15 +97,14 @@ public class sorcerer {
                 Spell.add("Gespenst");
             }
         }
+        return Spell;
     }
 
     public String toString(){
         String output = "";
         output += "\nYour "+ magicType +" Sorcerer is Rank #" + wizardRank;
         output += "\nHe can use these Spells:";
-//        for (int i = 0; i < Spell.size(); i++) {
-//            output += "\n" + Spell.get(i);
-//        }
+
         return output;
 
 

@@ -32,7 +32,7 @@ class golem extends Enemies{
         }
         setDens();
     }
-    private void setDens(){
+    public String setDens(){
         if (element == "rock"){
             dens = Density.MEDIUM;
         }
@@ -42,6 +42,7 @@ class golem extends Enemies{
         else{
             dens = Density.HIGH;
         }
+        return dens + "";
     }
 
     public String toString(){
